@@ -48,5 +48,5 @@ public class DinerMenu {
         return  stringBuilder.toString();
     }
 
-      // other menu methods here
+    // other menu methods here
 }
