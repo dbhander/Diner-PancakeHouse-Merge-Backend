@@ -1,9 +1,12 @@
 package edu.iu.habahram.DinerPancakeHouseMerge.model;
 
-public class DinerMenu {
+import java.util.Arrays;
+import java.util.Iterator;
+
+public class DinerMenu implements Menu{
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
-    MenuItem[] menuItems;
+    MenuItem[] menuItems; //use concrete iterator
 
     public DinerMenu() {
         menuItems = new MenuItem[MAX_ITEMS];
@@ -48,5 +51,7 @@ public class DinerMenu {
         return  stringBuilder.toString();
     }
 
-    // other menu methods here
+    public Iterator<MenuItem> createIterator(){
+        return Arrays.stream(menuItems).iterator();
+    }
 }
