@@ -36,4 +36,9 @@ public class Menu extends MenuComponent {
         }
         return allItems.toArray(new MenuItem[0]);
     }
+
+    public Iterator<MenuComponent> createIterator() {
+        return new CompositeIterator(menuComponents.iterator());
+    }
+
 }
