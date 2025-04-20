@@ -25,9 +25,3 @@ jobs:
 
       - name: Build with Maven
         run: ./mvnw clean package -DskipTests
-
-      - name: Archive JAR
-        uses: actions/upload-artifact@v3.1.3
-        with:
-          name: backend-jar
-          path: target/*.jar
